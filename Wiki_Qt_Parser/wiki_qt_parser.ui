@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Wiki_Qt_ParserClass</class>
+ <widget class="QMainWindow" name="Wiki_Qt_ParserClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>702</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string notr="true">Wiki Parser by DizzyLogic</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLineEdit" name="editInputFile">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>67</y>
+      <width>511</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>7</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 1. Select the Wikipedia database file that you want to parse.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bnSelectInputFile">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>67</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select input file</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>115</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 2. Select the output folder where the parsed data will be saved.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bnSelectOutputDir">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>135</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Select save folder</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editOutputDir">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>135</y>
+      <width>511</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>25</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>It can be compressed (.xml.bz2) or uncompressed (.xml).</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>192</y>
+      <width>531</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 3. Select parsing options.</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkTestRun">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>234</y>
+      <width>370</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>This is a test run (only the first 1,000 articles will be parsed - very quick)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkDiscardListPages">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>256</y>
+      <width>361</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Discard list-like articles (&quot;List of...&quot;, &quot;Outline of...&quot; etc.) - recommended</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkDiscardDisambigs">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>278</y>
+      <width>165</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Discard disambiguation pages</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="progressBar">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>614</y>
+      <width>401</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>439</y>
+      <width>531</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 4. Veryfy that you have enough disk space to store the output.</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editDiskSpace">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>459</y>
+      <width>511</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Select an input file to see space requirements</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioAllCoresMinOne">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>538</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All cores except one (5 cores - recommended)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioAllCores">
+    <property name="geometry">
+     <rect>
+      <x>282</x>
+      <y>537</y>
+      <width>131</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>All cores (6 cores)</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioOtherCores">
+    <property name="geometry">
+     <rect>
+      <x>411</x>
+      <y>537</y>
+      <width>101</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Other number: </string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>516</y>
+      <width>531</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 5. Select the number of processor cores to use for parsing.</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>584</y>
+      <width>531</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>STEP 6. Start the parse and wait for your files to be generated.</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bnStart">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>614</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>10</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Start!</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editOtherCores">
+    <property name="geometry">
+     <rect>
+      <x>505</x>
+      <y>537</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>545</x>
+      <y>540</y>
+      <width>46</width>
+      <height>13</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>cores</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>44</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>The file name is usually similar to &quot;enwiki-20141008-pages-articles.xml.bz2&quot;</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkSkipImageCaptions">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>374</y>
+      <width>370</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Skip image captions in plain text (they break the flow of text)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>212</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>General options:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>308</y>
+      <width>521</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plain text options:</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkMarkSections">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>352</y>
+      <width>184</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark section titles (#Subtitle tag)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkMarkCaptions">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>396</y>
+      <width>196</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark image captions (#Caption tag)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkMarkArticles">
+    <property name="geometry">
+     <rect>
+      <x>21</x>
+      <y>330</y>
+      <width>211</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mark article start (with an #Article tag)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelParseStatus">
+    <property name="geometry">
+     <rect>
+      <x>177</x>
+      <y>650</y>
+      <width>381</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bnGoToFolder">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>650</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>131</width>
+      <height>31</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>See files in folder</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>702</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionHowToUse"/>
+    <addaction name="actionLicense"/>
+   </widget>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About Wiki Parser</string>
+   </property>
+  </action>
+  <action name="actionHowToUse">
+   <property name="text">
+    <string>How to use</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>License</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="wiki_qt_parser.qrc"/>
+ </resources>
+ <connections/>
+</ui>

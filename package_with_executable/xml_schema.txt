@@ -1,0 +1,50 @@
+<page type="disambig">					//disambiguation pages
+<page type="article" list="yes">		//list="yes" is there for list pages (list of, outline of, dates, etc.)
+<page type="article">					//regular article
+	<url>								//unique name for the page, usually matches the title
+	<title>								//url that has strange symbols replaced
+	<text>								//contains the text of the article, including the first paragraph and all sections
+		<firstPara>						//first paragraph - the text proceeding any sections
+			<list>						//list elements are wrapped in <list> nodes
+				<listEl>
+				<listEl>
+			<par>						//paragraph node
+				<link>					//link within wikipedia
+					<target>			//link target (targeted wikipedia page)
+					<tSection>			//targeted section, if it is specified
+					<anchor>			//the anchor text of the link
+				<extLink>				//external link
+					<target>
+					<anchor>
+				<file>					//image, video, or any other file link. Most often just an image
+					<target>
+					<param>				//file nodes can have parameters specified
+					<param>	
+					<caption>			//the caption for the image or video
+				<media>					
+					<target>
+					<param>
+					<param>
+				<category>				//category link
+					<target>
+					<param>
+					<param>
+				<interwiki>				//interwiki link
+					<target>
+					<param>
+					<param>
+				<template>				//template. Infobox templates contain a lot of useful information and are not removed from XML during parsing.
+					<target>
+					<param>
+					<param pn="image"> 	//pn contains the name for named parameters, such as "image=Sicily.jpg".
+		<section level="2">				//section and subtitle level. level=2 - most important, level=6 - least important. The parser fully parses the section tree.
+			<secTitle>					//title of the section
+			<secContent>				//section content - can include sections of the lower level, paragraphs and lists
+				<par>
+				<section level="3">
+					<secTitle>
+					<secContent>
+						<par>
+						<list>
+							<listEl>
+							<listEl>

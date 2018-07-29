@@ -1,0 +1,32 @@
+caption
+image_caption
+photo_caption
+static_image_caption
+caption2
+skyline_caption
+image caption
+logo_caption
+caption_skyline
+image_caption2
+logocaption
+imagecaption
+static_image_2_caption
+caption1
+imgcaption
+image_capt
+website_caption
+caption3
+crew_photo_caption
+static_image_caption_2
+caption_lake
+image2_caption
+image3_caption
+photo caption
+crew_caption
+opening_caption
+screenshot caption
+img_caption
+logo caption
+photo legend
+crewcaption
+loc_caption

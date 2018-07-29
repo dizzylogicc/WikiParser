@@ -1,0 +1,15 @@
+*.sdf
+*.exe
+*.log
+*.tlog
+*.dll
+*.pdb
+*.opensdf
+moc_*.*
+ui_*.*
+Output/
+Tidy/Output
+Tidy/x64/
+re2/Output
+Wiki_Qt_Parser/x64/
+Wiki_Qt_Parser/GeneratedFiles/

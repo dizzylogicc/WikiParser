@@ -1,0 +1,85 @@
+km	km
+m	m
+cm	cm
+mm	mm
+mi	mi
+yd	yd
+ftin	ftin
+ft	ft
+in	in
+km2	km<sup>2</sup>
+m2	m<sup>2</sup>
+cm2	cm<sup>2</sup>
+mm2	mm<sup>2</sup>
+sqmi	sq mi
+sqft	sq ft
+sqin	sq in
+impgal	imp gal
+impoz	imp fl oz
+USgal	gal
+U.S.gal	gal
+USoz	fl oz
+USdrygal	dry gal
+U.S.drygal	dry gal
+l	L
+L	L
+mL	mL
+ml	ml
+m/s	m/s
+km/h	km/h
+mph	mph
+ft/s	ft/s
+kn	kn
+GN	GN
+MN	MN
+kN	kN
+N	N
+mN	mN
+nN	nN
+LT-f	LT<sub>f</sub>
+ST-f	ST<sub>f</sub>
+LTf	LT<sub>f</sub>
+STf	ST<sub>f</sub>
+K	K
+C	C
+F	F
+°F	°F
+°C	°C
+&deg;C	&deg;C
+&deg;F	&deg;F
+kg	kg
+g	g
+mg	mg
+t	t
+MT	MT
+LT	LT
+ST	ST
+st	st
+lb	lb
+oz	oz
+Nm	Nm
+kg-m	kg-m
+ft-lb	ft-lb
+N-m	N-m
+kgf-m	kgf-m
+lbf-m	lbf-m
+km/l	km/l
+l/100 km	l/100 km
+l/km	l/km
+mpgimp	mpgimp
+mpgus	mpg
+impgal/mi	impgal/mi
+usgal/mi	gal/mi
+PD/sqkm	/km<sup>2</sup>
+/sqkm	/km<sup>2</sup>
+PD/ha	/ha
+/ha	/ha
+PD/sqmi	/sq mi
+/sqmi	/sq mi
+PD/acre	/acre
+/acre	/acre
+PD/km2	/km<sup>2</sup>
+acre	acre
+acres	acres
+ha	ha
+km²	km²
