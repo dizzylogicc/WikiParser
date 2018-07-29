@@ -8,7 +8,7 @@ While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_
 
 A 64-bit Windows installer is available from the [author's page](https://dizzylogic.com/wiki-parser), which also has some additional information on using Wiki Parser:
 
-**[WikiParser installer for 64-bit Windows](https://dizzylogic.com/wiki-parser)**
+**[WikiParser installer for Windows (64-bit)](https://dizzylogic.com/wiki-parser)**
 
 ## Getting Started
 
