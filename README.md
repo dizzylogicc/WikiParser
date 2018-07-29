@@ -1,1 +1,1 @@
-##Wiki Parser: a high-performance C++ parser for English Wikipedia
+## Wiki Parser: a high-performance parser for English Wikipedia
