@@ -25,7 +25,8 @@ Wiki Parser source code has five dependencies on outside libraries, of which two
 
 If you don't have them already, go ahead and download the Qt5 and Boost binaries appropriate for your machine and operating system.
 
+### Building with Visual Studio (Windows)
 
 ## License
 
-This project is licensed under the MIT Open Source License. See LICENSE.txt file for details.
+This project is licensed under the MIT Open Source License. See LICENSE file for details.
