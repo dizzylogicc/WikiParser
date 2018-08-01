@@ -25,7 +25,20 @@ Wiki Parser source code has five dependencies on outside libraries, of which two
 
 If you don't have them already, go ahead and download the Qt5 and Boost binaries appropriate for your machine and operating system.
 
+
 ### Building with Visual Studio (Windows)
+This is the tried-and-tested build variant for Wiki Parser. You'll need Visual Studio 2013 or newer with the [Qt plugin](http://doc.qt.io/archives/vs-addin/index.html) installed. Follow these steps to build the project:
+
+* Open the solution file `Wiki_Qt_Parser.sln` with Visual Studio.
+* Point the project to where Qt5 is located on your system (`Qt5 menu -> Qt Options` and `Qt5 menu -> Qt Project Settings`).
+* Set the build configuration to "Release" and "x64" (`Build -> Configuration manager`).
+* Set the *include* and *library* directories for your Boost installation: select the Wiki_Qt_Parser project, go to `Project -> Wiki_Qt_Parser properties -> Configuration properties -> VC++ directories`. Edit the Include Directories and Library Directories lines to add paths to Boost.
+* Build the Re2 and Tidy projects. Then build the Wiki_Qt_Parser project.
+* The executable produced by the build needs all the files from the `package_with_executable` directory to run. Place those files in the same directory as the executable. In addition, in order to start independently from the build environment, the executable will need the Qt DLLs and platform files packaged with it per usual Qt requirements. Have a look at the directory structure created by the [installer package](https://dizzylogic.com/wiki-parser) for exact file names.
+
+
+### Building with Qt Creator (Linux/Mac OS/Windows)
+The
 
 ## License
 
