@@ -23,7 +23,7 @@ Wiki Parser source code has five dependencies on outside libraries, of which two
 * [HTML Tidy](http://www.html-tidy.org/) - a library that fixes errors in HTML and XML formatting. Included with source code.
 * [pugixml](https://pugixml.org/) - fast, lightweight XML processing library. Included with source code.
 
-Go ahead and download the Qt5 and Boost binaries appropriate for your machine and operating system (if you don't have them already).
+If you don't have them already, go ahead and download the Qt5 and Boost binaries appropriate for your machine and operating system.
 
 
 ## License
