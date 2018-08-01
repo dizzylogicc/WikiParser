@@ -10,7 +10,7 @@ While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_
 
 **[Wiki Parser installer for Windows (64-bit)](https://dizzylogic.com/wiki-parser)**
 
-![Wiki Parser main window](Wiki_Qt_Parser/Wiki_Parser_main_window.jpg?raw=true "Wiki Parser main window")
+![Wiki Parser main window](Wiki_Qt_Parser/Wiki_Parser_main_window.png?raw=true "Wiki Parser main window")
 
 
 ## Getting Started
