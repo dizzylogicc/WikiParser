@@ -38,8 +38,13 @@ This is the tried-and-tested build variant for Wiki Parser. You'll need Visual S
 
 
 ### Building with Qt Creator (Linux/Mac OS/Windows)
-The
+You should be able to build this project with Qt Creator as well (for all three operating systems). I have done it under Mac OS for an earlier version of Wiki Parser, though not for the latest version. You'll need to create proper project files for Qt Creator if you are willing to try. There are auto-generated .pri and .pro files included with the source code that can serve as a starting point. Do let me know if you encounter any issues.
+
+
+## How it works 
+
+
 
 ## License
 
-This project is licensed under the MIT Open Source License. See LICENSE file for details.
+This project is licensed under the MIT License. See LICENSE file for details.
