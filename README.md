@@ -14,7 +14,7 @@ While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_
 
 
 ## Getting Started
-To build this source code on your machine, clone this repository:
+To build this source code on your machine, clone the repository:
 
 `git clone https://github.com/dizzylogicc/WikiParser`
 
