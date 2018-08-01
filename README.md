@@ -42,7 +42,11 @@ You should be able to build this project with Qt Creator as well (for all three 
 
 
 ## How it works 
+It's probably a good idea to give a high-level overview of the code. The actual parsing of the MediaWiki-formatted Wikipedia pages occurs in the `CWikipediaParser` class. The class named `ThreadedWrapper` is a multithreaded wrapper. It spawns as many threads as requested by the user, with each thread creating its own thread-local `CWikipediaParser`. The constructor for `CWikipediaParser` is given a file name for the file containing serialized parser parameters (basically, the serialized contents of the `Parser data files` directory). This is the `pdata.cfg` file in the repository.
 
+Raw data is extracted from the bz2 compressed Wikipedia dump file with a Boost filtering streambuffer. It is then split into pages (in the form of strings), which in turn are fed to the worker threads of the `ThreadedParser` where the `CWikipediaPaser::Parse` function is called. The parser then processes each page and outputs an XML document object (`pugixml::xml_document`). These XML documents are printed into strings again and continuously written to the XML file in a thread-safe manner.
+
+Once all the pages from the Wikipedia dump have been parsed, a `ThreadedWriter` class starts its work. It only launches one worker thread, which is actually sufficient because there isn't much heavy lifting left to do at this point. `ThreadedWriter` reads the XML pages from the disk file written by the `ThreadedParser` and converts them into plain text. 
 
 
 ## License
