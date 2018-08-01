@@ -7,42 +7,36 @@
 message("You are running qmake on a generated .pro file. This may not work!")
 
 
-HEADERS += ../../../Common classes/CAISFileFetcher.h \
-    ../../../Common classes/CAISSplitWriter.h \
-    ../../../Common classes/Common.h \
-    ../../../Common classes/CommonUtility.h \
-    ../../../Common classes/ErrorOutUtil.h \
-    ../../../Common classes/Savable.h \
-    ../../../Common classes/SimpleXml.h \
-    ../../../Common classes/Timer.h \
-    ../../../Common classes/WordTrace.h \
-    ../../WikiParser/WikiParser/DizzyUtility.h \
-    ../../WikiParser/WikiParser/PageIndex.h \
-    ../../WikiParser/WikiParser/ThreadedParser.h \
-    ../../WikiParser/WikiParser/ThreadedWriter.h \
-    ../../WikiParser/WikiParser/WikipediaParser.h \
+HEADERS += ../shared/CAISFileFetcher.h \
+    ../shared/CAISSplitWriter.h \
+    ./PageIndex.h \
     ./resource.h \
+    ./ThreadedParser.h \
+    ./ThreadedWriter.h \
+    ./WikipediaParser.h \
     ./WpSavable.h \
     ./wiki_qt_parser.h \
     ./aboutdialog.h \
     ./howtousedialog.h \
     ./licensedialog.h
-SOURCES += ../../../Common classes/Common.cpp \
-    ../../../Common classes/CommonUtility.cpp \
-    ../../../Common classes/ErrorOutUtil.cpp \
-    ../../../Common classes/Savable.cpp \
-    ../../../Common classes/SimpleXml.cpp \
-    ../../../Common classes/Timer.cpp \
-    ../../../Common classes/WordTrace.cpp \
-    ../../WikiParser/WikiParser/DizzyUtility.cpp \
-    ../../WikiParser/WikiParser/PageIndex.cpp \
-    ../../WikiParser/WikiParser/ThreadedParser.cpp \
-    ../../WikiParser/WikiParser/ThreadedWriter.cpp \
-    ../../WikiParser/WikiParser/WikipediaParser.cpp \
+SOURCES += ../pugixml/src/pugixml.cpp \
+    ../shared/Common.cpp \
+    ../shared/CommonUtility.cpp \
+    ../shared/DizzyUtility.cpp \
+    ../shared/QtUtils.cpp \
+    ../shared/Savable.cpp \
+    ../shared/SimplestXml.cpp \
+    ../shared/SimpleXml.cpp \
+    ../shared/Timer.cpp \
+    ../shared/WordTrace.cpp \
     ./aboutdialog.cpp \
     ./howtousedialog.cpp \
     ./licensedialog.cpp \
     ./main.cpp \
+    ./PageIndex.cpp \
+    ./ThreadedParser.cpp \
+    ./ThreadedWriter.cpp \
+    ./WikipediaParser.cpp \
     ./wiki_qt_parser.cpp
 FORMS += ./wiki_qt_parser.ui \
     ./aboutdialog.ui \
