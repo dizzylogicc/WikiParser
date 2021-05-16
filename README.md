@@ -1,17 +1,21 @@
 ## Wiki Parser: a high-performance data extractor for English Wikipedia
 
-Wiki Parser is a high-performance parser designed to make Wikipedia more accessible to data mining and text analysis. Wikipedia is written in a fairly tricky formatting language called [MediaWiki](https://www.mediawiki.org/wiki/Help:Formatting); Wiki Parser converts the MediaWiki-formatted Wikipedia pages into regular human-readable text and standard XML.
+Wiki Parser is a high-performance parser designed to make Eglish Wikipedia more accessible to data mining and text analysis. Wikipedia is written in a fairly tricky formatting language called [MediaWiki](https://www.mediawiki.org/wiki/Help:Formatting); Wiki Parser converts the MediaWiki-formatted Wikipedia pages into regular human-readable text and standard XML.
 
 In the XML output, each Wikipedia page is represented as an Abstract Syntax Tree (AST) that preserves the page structure (title, first paragraph, sections and their headings) and elements such as links, image references, infobox templates, and so on.
 
 While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_parsers), Wiki Parser is in a class of its own performance-wise. It can parse a complete dump of English Wikipedia (66 GB uncomressed as of July 2018) into plain text and XML in about 2-3 hours on a modern machine, which is is 10-100 times faster than other parsers. The speed advantage is largely due to multithreaded C++ code with only sparse use of regexes.
 
-A 64-bit Windows installer is available in the **Win64 Installer** folder (Windows Vista or above). **To install, simply download and run the provided WikiParser-setup.msi file**.
+## Windows Installer
+
+A 64-bit Windows installer is available in the **Win64 Installer** folder (Windows Vista or above). **To install, simply download and run the file named WikiParser-setup.msi**.
+
+**Important:** When using the software, make sure you run it on an English Wikipedia database dumb file that ends in **"-pages-articles.xml.bz2"**. The latest wikipedia dump is named **"enwiki-latest-pages-articles.xml.bz2"**. The parser will fail to parse other types of dumps. These dumps can be found at https://dumps.wikimedia.org/enwiki/.
 
 ![Wiki Parser main window](Wiki_Qt_Parser/Wiki_Parser_main_window.png?raw=true "Wiki Parser main window")
 
 
-## Getting Started
+## Building from source code
 To build this source code on your machine, clone the repository:
 
 `git clone https://github.com/dizzylogicc/WikiParser`
