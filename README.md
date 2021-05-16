@@ -6,7 +6,7 @@ In the XML output, each Wikipedia page is represented as an Abstract Syntax Tree
 
 While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_parsers), Wiki Parser is in a class of its own performance-wise. It can parse a complete dump of English Wikipedia (66 GB uncomressed as of July 2018) into plain text and XML in about 2-3 hours on a modern machine, which is is 10-100 times faster than other parsers. The speed advantage is largely due to multithreaded C++ code with only sparse use of regexes.
 
-A 64-bit Windows installer is available in the **Win64 Installer** folder (Windows Vista or above). **To install, simply download the provided WikiParser-setup.msi file**.
+A 64-bit Windows installer is available in the **Win64 Installer** folder (Windows Vista or above). **To install, simply download and run the provided WikiParser-setup.msi file**.
 
 ![Wiki Parser main window](Wiki_Qt_Parser/Wiki_Parser_main_window.png?raw=true "Wiki Parser main window")
 
