@@ -10,9 +10,9 @@ While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_
 
 A 64-bit Windows installer is available in the **Win64 Installer** folder (Windows Vista or above). **To install, simply download and run the file named WikiParser-setup.msi**.
 
-**Important:** When using the software, make sure you run it on an English Wikipedia database dump file that ends in **"-pages-articles.xml.bz2"**. The parser will fail to parse other types of dumps.
+**Important:** When using the software, make sure you run it on an English Wikipedia database dump file that ends in **"-pages-articles.xml.bz2"**. The parser will fail to parse other types of dumps, or dumps from Wikipedia in other languages.
 
-The latest wikipedia dump is named **"enwiki-latest-pages-articles.xml.bz2"**. These dumps can be found at https://dumps.wikimedia.org/enwiki/.
+The latest English Wikipedia dump is named **"enwiki-latest-pages-articles.xml.bz2"**. These dumps can be found at https://dumps.wikimedia.org/enwiki/.
 
 ![Wiki Parser main window](Wiki_Qt_Parser/Wiki_Parser_main_window.png?raw=true "Wiki Parser main window")
 
