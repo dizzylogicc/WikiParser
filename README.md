@@ -6,7 +6,7 @@ In the XML output, each Wikipedia page is represented as an Abstract Syntax Tree
 
 While many Wikipedia parsers [exist](https://www.mediawiki.org/wiki/Alternative_parsers), Wiki Parser is in a class of its own performance-wise. It can parse a complete dump of English Wikipedia (66 GB uncomressed as of July 2018) into plain text and XML in about 2-3 hours on a modern machine, which is is 10-100 times faster than other parsers. The speed advantage is largely due to multithreaded C++ code with only sparse use of regexes.
 
-It's important to understand that Wiki Parser is mostly designed for text and page structure extraction, and its output can differ significantly from Wikipedia pages as seen in browsers. For example, it skips the tags and templates that it does not understand (such as `<math>` tags), ignores tables (which are difficult to represent in textual format), flattens multi-level lists into a single level, etc.
+It's important to understand that Wiki Parser is mostly designed for text and page structure extraction, and its output can differ substantially from Wikipedia pages as seen in browsers. For example, it skips the tags and templates that it does not understand (such as `<math>` tags), ignores tables (which are difficult to represent in textual format), flattens multi-level lists into a single level, etc.
 
 ## Windows Installer
 
